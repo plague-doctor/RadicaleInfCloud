@@ -694,8 +694,8 @@ var globalTodoListFilterSelected=['filterAction', 'filterProgress'];
 // precision. Non-business hours are faded out in the calendar interface.
 // If both variables are set to the same value then no fade out occurs.
 // Example:
-var globalCalendarStartOfBusiness=8;
-var globalCalendarEndOfBusiness=17;
+var globalCalendarStartOfBusiness=9;
+var globalCalendarEndOfBusiness=19;
 
 
 // globalDefaultEventDuration
@@ -703,7 +703,7 @@ var globalCalendarEndOfBusiness=17;
 // If undefined or null, globalCalendarEndOfBusiness value will be taken as
 // a default end time instead.
 // Example:
-var globalDefaultEventDuration=120;
+var globalDefaultEventDuration=60;
 
 
 // globalAMPMFormat
@@ -757,7 +757,7 @@ var globalTimeZoneSupport=true;
 // timezones (defined in timezones.js):
 // grep "'[^']\+': {" timezones.js | sed -Ee "s#(\s*'|':\s*\{)##g"
 // Example:
-var globalTimeZone='Europe/Berlin';
+var globalTimeZone='Europe/Moscow';
 
 
 // globalTimeZonesEnabled
@@ -1009,7 +1009,7 @@ var globalUriHandlerProfile={
 // all supported country codes (defined in common.js):
 // grep -E "'[a-z]{2}':\s+\[" common.js | sed -Ee 's#^\s+|\s+\[\s+# #g'
 // Example:
-var globalDefaultAddressCountry='us';
+var globalDefaultAddressCountry='ru';
 
 
 // globalAddressCountryEquivalence
@@ -1053,6 +1053,8 @@ var globalDefaultAddressCountry='us';
 var globalAddressCountryEquivalence=[
 	{country: 'de', regex: '^\\W*Deutschland\\W*$'},
 	{country: 'sk', regex: '^\\W*Slovensko\\W*$'}
+	{country: 'ru', regex: '^\\W*Russia\\W*$'}
+	{country: 'ru', regex: '^\\W*Russian\\W*$'}
 ];
 
 
@@ -1062,7 +1064,7 @@ var globalAddressCountryEquivalence=[
 // see the comment for pre globalDefaultAddressCountry option).
 // Example:
 //   var globalAddressCountryFavorites=['de','sk'];
-var globalAddressCountryFavorites=[];
+var globalAddressCountryFavorites=['ru'];
 
 
 // globalAddrColorPropertyXmlns
@@ -1101,7 +1103,9 @@ var globalAddressCountryFavorites=[];
 // Examples:
 //   var globalContactStoreFN=[' last', ' middle', ' first'];
 //   var globalContactStoreFN=['last', ', middle', ' ,first'];
-var globalContactStoreFN=['prefix',' last',' middle',' first',' suffix'];
+
+// var globalContactStoreFN=['prefix',' last',' middle',' first',' suffix'];
+var globalContactStoreFN=['last',', first'];
 
 
 // globalContactPhotoType
@@ -1113,7 +1117,7 @@ var globalContactStoreFN=['prefix',' last',' middle',' first',' suffix'];
 // If undefined or invalid value is specified then 'jpeg' is used.
 // Examples:
 //   var globalContactPhotoType='jpeg';
-//   var globalContactPhotoType='png';
+var globalContactPhotoType='png';
 
 
 // globalContactPhotoScaleFactor
@@ -1464,6 +1468,6 @@ var globalGroupContactsByCompanies=false;
 // to 0.95 then 95% of data will fit into the column width, and the remaining
 // 5% will be truncated (" ...").
 // Example:
-var globalContactDataMinVisiblePercentage=0.95;
+var globalContactDataMinVisiblePercentage=1;
 
 

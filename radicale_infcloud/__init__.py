@@ -23,7 +23,7 @@ from http import client
 from radicale import storage, web
 from radicale.web import NOT_FOUND, MIMETYPES, FALLBACK_MIMETYPE
 
-VERSION = "2.0.0"
+VERSION = "2.0.1"
 
 
 class Web(web.Web):
