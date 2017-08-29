@@ -1052,8 +1052,8 @@ var globalDefaultAddressCountry='ru';
 // Example:
 var globalAddressCountryEquivalence=[
 	{country: 'de', regex: '^\\W*Deutschland\\W*$'},
-	{country: 'sk', regex: '^\\W*Slovensko\\W*$'}
-	{country: 'ru', regex: '^\\W*Russia\\W*$'}
+	{country: 'sk', regex: '^\\W*Slovensko\\W*$'},
+	{country: 'ru', regex: '^\\W*Russia\\W*$'},
 	{country: 'ru', regex: '^\\W*Russian\\W*$'}
 ];
 
