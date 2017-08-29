@@ -768,7 +768,7 @@ var globalTimeZone='Europe/Moscow';
 // that timezone is enabled (even if it is not present in this list).
 // Example:
 //   var globalTimeZonesEnabled=['America/New_York', 'Europe/Berlin'];	
-var globalTimeZonesEnabled=[];
+var globalTimeZonesEnabled=['Europe/Moscow'];
 
 
 // globalRewriteTimezoneComponent
