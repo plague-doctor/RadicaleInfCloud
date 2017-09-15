@@ -712,7 +712,7 @@ var globalDefaultEventDuration=60;
 // ONLY if you want to use custom time format (instead of the localization
 // predefined one).
 // Example:
-//var globalAMPMFormat=false;
+var globalAMPMFormat=false;
 
 
 // globalTimeFormatBasic
