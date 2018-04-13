@@ -101,7 +101,7 @@ var globalEnableDevelBuilds=true;
 //     globalAccountSettings
 //     globalNetworkCheckSettings
 //     globalNetworkAccountSettings
-// - lockTimeOut 
+// - lockTimeOut
 //   NOTE: used only if server supports LOCK requests
 //   This option sets the LOCK timeout value if resource locking
 //   is used (in miliseconds).
@@ -179,7 +179,7 @@ var globalEnableDevelBuilds=true;
 //     %U = logged user name
 //     %u = logged user name without the @domain.com part (if present)
 //   If undefined, empty or or null then '%d/%p [%u]' is used.
-//   Examples: 
+//   Examples:
 //     hrefLabel: '%d/%p [%u]'
 //     hrefLabel: '%D/%u'
 //   This property is supported in:
@@ -192,7 +192,7 @@ var globalEnableDevelBuilds=true;
 //   - true
 //     all collections will be "read-only"
 //   - array of URL encoded
-//     - collections, such as: 
+//     - collections, such as:
 //       '/caldav.php/user/calendar/'
 //       '/caldav.php/user%40domain.com/calendar/'
 //     - regexes, such as:
@@ -202,7 +202,7 @@ var globalEnableDevelBuilds=true;
 //   Examples:
 //     forceReadOnly: null
 //     forceReadOnly: true
-//     forceReadOnly: ['/caldav.php/user/calendar/', 
+//     forceReadOnly: ['/caldav.php/user/calendar/',
 //                     '/caldav.php/user/calendar2/']
 //     forceReadOnly: [new RegExp('^/.*/user/calendar[0-9]/$', 'i')]
 //   This property is supported in:
@@ -217,7 +217,7 @@ var globalEnableDevelBuilds=true;
 //   - true
 //     alarm functionality is disabled for all collections
 //   - array of URL encoded
-//     - collections, such as: 
+//     - collections, such as:
 //       '/caldav.php/user/calendar/'
 //       '/caldav.php/user%40domain.com/calendar/'
 //     - regexes, such as:
@@ -227,7 +227,7 @@ var globalEnableDevelBuilds=true;
 //   for all collections.
 //   Examples:
 //     ignoreAlarms: true
-//     ignoreAlarms: ['/caldav.php/user/calendar/', 
+//     ignoreAlarms: ['/caldav.php/user/calendar/',
 //                    '/caldav.php/user/calendar2/']
 //     ignoreAlarms: [new RegExp('^/.*/user/calendar[0-9]/$', 'i')]
 //   This property is supported in:
@@ -241,14 +241,14 @@ var globalEnableDevelBuilds=true;
 //   the background color for that day will be pink/light-red.
 //   Supported values:
 //   - array of URL encoded
-//     - collections, such as: 
+//     - collections, such as:
 //       '/caldav.php/user/calendar/'
 //       '/caldav.php/user%40domain.com/calendar/'
 //     - regexes, such as:
 //       new RegExp('^/caldav.php/user/calendar[0-9]/$', 'i')
 //     specifies the list of background calendar collections.
 //   Examples:
-//     backgroundCalendars: ['/caldav.php/user/calendar/', 
+//     backgroundCalendars: ['/caldav.php/user/calendar/',
 //                           '/caldav.php/user/calendar2/']
 //     backgroundCalendars: [new RegExp('^/.*/user/calendar[0-9]/$', 'i')]
 //   This property is supported in:
@@ -287,28 +287,28 @@ var globalEnableDevelBuilds=true;
 // options. It is safe/recommended to keep the remaining options unchanged!
 // Example:
 //var globalAccountSettings=[
-//	{
-//		href: 'https://server1.com:8443/caldav.php/USERNAME1/',
-//		userAuth:
-//		{
-//			userName: 'USERNAME1',
-//			userPassword: 'PASSWORD1'
-//		},
-//		timeOut: 90000,
-//		lockTimeOut: 10000,
-//		checkContentType: true,
-//		settingsAccount: true,
-//		delegation: true,
-//		hrefLabel: null,
-//		forceReadOnly: null,
-//		ignoreAlarms: false,
-//		backgroundCalendars: []
-//	},
-//	{
-//		href: 'https://server2.com:8443/caldav.php/USERNAME2/',
-//		...
-//		...
-//	}
+//  {
+//      href: 'https://server1.com:8443/caldav.php/USERNAME1/',
+//      userAuth:
+//      {
+//          userName: 'USERNAME1',
+//          userPassword: 'PASSWORD1'
+//      },
+//      timeOut: 90000,
+//      lockTimeOut: 10000,
+//      checkContentType: true,
+//      settingsAccount: true,
+//      delegation: true,
+//      hrefLabel: null,
+//      forceReadOnly: null,
+//      ignoreAlarms: false,
+//      backgroundCalendars: []
+//  },
+//  {
+//      href: 'https://server2.com:8443/caldav.php/USERNAME2/',
+//      ...
+//      ...
+//  }
 //];
 
 
@@ -337,19 +337,19 @@ var globalEnableDevelBuilds=true;
 // port, ... (client installed into Davical "htdocs" subdirectory;
 // works "out of the box", no additional setup required):
 var globalNetworkCheckSettings={
-	href: location.protocol+'//'+location.hostname+
-		(location.port ? ':'+location.port: '')+
-		location.pathname.replace(RegExp('(/+[^/]+/*){2}(index\.html)?$'),'')+'/',
-	timeOut: 90000,
-	lockTimeOut: 10000,
-	checkContentType: true,
-	settingsAccount: true,
-	delegation: true,
-	additionalResources: [],
-	hrefLabel: null,
-	forceReadOnly: null,
-	ignoreAlarms: false,
-	backgroundCalendars: []
+    href: location.protocol+'//'+location.hostname+
+        (location.port ? ':'+location.port: '')+
+        location.pathname.replace(RegExp('(/+[^/]+/*){2}(index\.html)?$'),'')+'/',
+    timeOut: 90000,
+    lockTimeOut: 10000,
+    checkContentType: true,
+    settingsAccount: true,
+    delegation: true,
+    additionalResources: [],
+    hrefLabel: null,
+    forceReadOnly: null,
+    ignoreAlarms: false,
+    backgroundCalendars: []
 }
 
 
@@ -378,11 +378,11 @@ var globalNetworkCheckSettings={
 // Use this configuration if the "auth" module is located in the client
 // installation subdirectory (default):
 //var globalNetworkAccountSettings={
-//	href: location.protocol+'//'+location.hostname+
-//		(location.port ? ':'+location.port : '')+
-//		location.pathname.replace(RegExp('index\.html$'),'')+
-//		'auth/',
-//	timeOut: 30000
+//  href: location.protocol+'//'+location.hostname+
+//      (location.port ? ':'+location.port : '')+
+//      location.pathname.replace(RegExp('index\.html$'),'')+
+//      'auth/',
+//  timeOut: 30000
 //};
 
 
@@ -497,11 +497,11 @@ var globalInterfaceCustomLanguages=[];
 // Example:
 //   var globalSortAlphabet=null;
 var globalSortAlphabet=' 0123456789'+
-	'AÀÁÂÄÆÃÅĀBCÇĆČDĎEÈÉÊËĒĖĘĚFGĞHIÌÍÎİÏĪĮJKLŁĹĽMNŃÑŇOÒÓÔÖŐŒØÕŌ'+
-	'PQRŔŘSŚŠȘșŞşẞTŤȚțŢţUÙÚÛÜŰŮŪVWXYÝŸZŹŻŽ'+
-	'aàáâäæãåābcçćčdďeèéêëēėęěfgğhiìíîïīįıjklłĺľmnńñňoòóôöőœøõō'+
-	'pqrŕřsśšßtťuùúûüűůūvwxyýÿzźżžАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЮЯ'+
-	'Ьабвгґдеєжзиіїйклмнопрстуфхцчшщюяь';
+    'AĄÀÁÂÄÆÃÅĀBCÇĆČDĎEÈÉÊËĒĖĘĚFGĞHIÌÍÎİÏĪĮJKLŁĹĽMNŃÑŇOÒÓÔÖŐŒØÕŌ'+
+    'PQRŔŘSŚŠȘșŞşẞTŤȚțŢţUÙÚÛÜŰŮŪVWXYÝŸZŹŻŽ'+
+    'aąàáâäæãåābcçćčdďeèéêëēėęěfgğhiìíîïīįıjklłĺľmnńñňoòóôöőœøõō'+
+    'pqrŕřsśšßtťuùúûüűůūvwxyýÿzźżžАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЮЯ'+
+    'Ьабвгґдеєжзиіїйклмнопрстуфхцчшщюяь';
 
 
 // globalSearchTransformAlphabet
@@ -510,11 +510,11 @@ var globalSortAlphabet=' 0123456789'+
 // key = regex text, value = search character
 // Example:
 var globalSearchTransformAlphabet={
-	'[ÀàÁáÂâÄäÆæÃãÅåĀā]': 'a', '[ÇçĆćČč]': 'c', '[Ďď]': 'd',
-	'[ÈèÉéÊêËëĒēĖėĘęĚě]': 'e', '[Ğğ]': 'g', '[ÌìÍíÎîİıÏïĪīĮį]': 'i',
-	'[ŁłĹĺĽľ]': 'l', '[ŃńÑñŇň]': 'n', '[ÒòÓóÔôÖöŐőŒœØøÕõŌō]': 'o',
-	'[ŔŕŘř]': 'r', '[ŚśŠšȘșŞşẞß]': 's', '[ŤťȚțŢţ]': 't',
-	'[ÙùÚúÛûÜüŰűŮůŪū]': 'u', '[ÝýŸÿ]': 'y', '[ŹźŻżŽž]': 'z'
+    '[ÀàÁáÂâÄäÆæÃãÅåĀāĄą]': 'a', '[ÇçĆćČč]': 'c', '[Ďď]': 'd',
+    '[ÈèÉéÊêËëĒēĖėĘęĚě]': 'e', '[Ğğ]': 'g', '[ÌìÍíÎîİıÏïĪīĮį]': 'i',
+    '[ŁłĹĺĽľ]': 'l', '[ŃńÑñŇň]': 'n', '[ÒòÓóÔôÖöŐőŒœØøÕõŌō]': 'o',
+    '[ŔŕŘř]': 'r', '[ŚśŠšȘșŞşẞß]': 's', '[ŤťȚțŢţ]': 't',
+    '[ÙùÚúÛûÜüŰűŮůŪū]': 'u', '[ÝýŸÿ]': 'y', '[ŹźŻżŽž]': 'z'
 };
 
 // globalResourceAlphabetSorting
@@ -534,7 +534,7 @@ var globalNewVersionNotifyUsers=null;
 
 
 // globalDatepickerFormat
-// Set the datepicker format (see 
+// Set the datepicker format (see
 // http://docs.jquery.com/UI/Datepicker/formatDate for valid values).
 // NOTE: date format is predefined for each localization - use this option
 // ONLY if you want to use custom date format (instead of the localization
@@ -604,7 +604,7 @@ var globalLoadedTodoCollections=[];
 // checkbox => data visible in the interface) by default after login.
 // If empty then all loaded calendar collections for the currently logged
 // user are checked.
-// NOTE: only already (down)loaded collections can be checked (see 
+// NOTE: only already (down)loaded collections can be checked (see
 // the globalLoadedCalendarCollections option).
 // NOTE: settings stored on the server (see settingsAccount) overwrite this
 // option.
@@ -617,7 +617,7 @@ var globalActiveCalendarCollections=[];
 // checkbox => data visible in the interface) by default after login.
 // If empty then all loaded todo collections for the currently logged
 // user are checked.
-// NOTE: only already (down)loaded collections can be checked (see 
+// NOTE: only already (down)loaded collections can be checked (see
 // the globalLoadedTodoCollections option).
 // NOTE: settings stored on the server (see settingsAccount) overwrite this
 // option.
@@ -647,7 +647,7 @@ var globalActiveTodoCollections=[];
 // for example: 'USER/todo_calendar/'
 // If empty or undefined then the first available todo collection
 // is selected automatically.
-// NOTE: only already (down)loaded collections can be pre-selected (see 
+// NOTE: only already (down)loaded collections can be pre-selected (see
 // the globalLoadedTodoCollections option).
 // NOTE: settings stored on the server (see settingsAccount) overwrite this
 // option.
@@ -694,8 +694,8 @@ var globalTodoListFilterSelected=['filterAction', 'filterProgress'];
 // precision. Non-business hours are faded out in the calendar interface.
 // If both variables are set to the same value then no fade out occurs.
 // Example:
-var globalCalendarStartOfBusiness=9;
-var globalCalendarEndOfBusiness=19;
+var globalCalendarStartOfBusiness=8;
+var globalCalendarEndOfBusiness=17;
 
 
 // globalDefaultEventDuration
@@ -757,17 +757,17 @@ var globalTimeZoneSupport=true;
 // timezones (defined in timezones.js):
 // grep "'[^']\+': {" timezones.js | sed -Ee "s#(\s*'|':\s*\{)##g"
 // Example:
-var globalTimeZone='Europe/Moscow';
+var globalTimeZone='Australia/Melbourne';
 
 
 // globalTimeZonesEnabled
-// This option sets the list of available timezones in the interface (for the 
+// This option sets the list of available timezones in the interface (for the
 // list of supported timezones see the comment for the previous configuration
 // option).
 // NOTE: if there is at least one event/todo with a certain timezone defined,
 // that timezone is enabled (even if it is not present in this list).
 // Example:
-//   var globalTimeZonesEnabled=['America/New_York', 'Europe/Berlin'];	
+//   var globalTimeZonesEnabled=['America/New_York', 'Europe/Berlin'];
 var globalTimeZonesEnabled=[];
 
 
@@ -884,8 +884,8 @@ var globalAppleRemindersMode=true;
 //   - typeList
 //     Set the list of objects you want to process from remote calendars;
 //     two options are available:
-//     - 'vevent' (show remote events in the interface) 
-//     - 'vtodo' (show remote todos in the interface) 
+//     - 'vevent' (show remote events in the interface)
+//     - 'vtodo' (show remote todos in the interface)
 //   - ignoreAlarm
 //     Set this option to true if you want to disable alarm notifications
 //     from the remote calendar.
@@ -896,25 +896,25 @@ var globalAppleRemindersMode=true;
 //     Set the calendar color you want to see in the interface.
 // Example:
 //var globalSubscribedCalendars={
-//	hrefLabel: 'Subscribed',
-//	calendars: [
-//		{
-//			href: 'http://something.com/calendar.ics',
-//			userAuth: {
-//				userName: '',
-//				userPassword: ''
-//			},
-//			typeList: ['vevent', 'vtodo'],
-//			ignoreAlarm: true,
-//			displayName: 'Remote Calendar 1',
-//			color: '#ff0000'
-//		},
-//		{
-//			href: 'http://calendar.com/calendar2.ics',
-//			...
-//			...
-//		}
-//	]
+//  hrefLabel: 'Subscribed',
+//  calendars: [
+//      {
+//          href: 'http://something.com/calendar.ics',
+//          userAuth: {
+//              userName: '',
+//              userPassword: ''
+//          },
+//          typeList: ['vevent', 'vtodo'],
+//          ignoreAlarm: true,
+//          displayName: 'Remote Calendar 1',
+//          color: '#ff0000'
+//      },
+//      {
+//          href: 'http://calendar.com/calendar2.ics',
+//          ...
+//          ...
+//      }
+//  ]
 //};
 
 
@@ -994,12 +994,12 @@ var globalUriHandlerTel='tel:';
 var globalUriHandlerEmail='mailto:';
 var globalUriHandlerUrl='http://';
 var globalUriHandlerProfile={
-	'twitter': 'http://twitter.com/%u',
-	'facebook': 'http://www.facebook.com/%u',
-	'flickr': 'http://www.flickr.com/photos/%u',
-	'linkedin': 'http://www.linkedin.com/in/%u',
-	'myspace': 'http://www.myspace.com/%u',
-	'sinaweibo': 'http://weibo.com/n/%u'
+    'twitter': 'http://twitter.com/%u',
+    'facebook': 'http://www.facebook.com/%u',
+    'flickr': 'http://www.flickr.com/photos/%u',
+    'linkedin': 'http://www.linkedin.com/in/%u',
+    'myspace': 'http://www.myspace.com/%u',
+    'sinaweibo': 'http://weibo.com/n/%u'
 };
 
 
@@ -1009,7 +1009,7 @@ var globalUriHandlerProfile={
 // all supported country codes (defined in common.js):
 // grep -E "'[a-z]{2}':\s+\[" common.js | sed -Ee 's#^\s+|\s+\[\s+# #g'
 // Example:
-var globalDefaultAddressCountry='ru';
+var globalDefaultAddressCountry='au';
 
 
 // globalAddressCountryEquivalence
@@ -1051,10 +1051,10 @@ var globalDefaultAddressCountry='ru';
 // is used by default.
 // Example:
 var globalAddressCountryEquivalence=[
-	{country: 'de', regex: '^\\W*Deutschland\\W*$'},
-	{country: 'sk', regex: '^\\W*Slovensko\\W*$'},
-	{country: 'ru', regex: '^\\W*Russia\\W*$'},
-	{country: 'ru', regex: '^\\W*Russian\\W*$'}
+    {country: 'de', regex: '^\\W*Deutschland\\W*$'},
+    {country: 'sk', regex: '^\\W*Slovensko\\W*$'},
+    {country: 'au', regex: '^\\W*Australia\\W*$'},
+    {country: 'au', regex: '^\\W*Australian\\W*$'}
 ];
 
 
@@ -1064,7 +1064,7 @@ var globalAddressCountryEquivalence=[
 // see the comment for pre globalDefaultAddressCountry option).
 // Example:
 //   var globalAddressCountryFavorites=['de','sk'];
-var globalAddressCountryFavorites=['ru'];
+var globalAddressCountryFavorites=['au', 'pl'];
 
 
 // globalAddrColorPropertyXmlns
@@ -1344,99 +1344,99 @@ var globalGroupContactsByCompanies=false;
 // department for company contacts (with "Dep -" prefix), and lastname for
 // personal contacts (with "Name -" prefix) use:
 // var globalCollectionDisplay=[
-// 	{
-// 		label: 'Company',
-// 		value: ['{Company}']
-// 	},
-// 	{
-// 		label: 'Department / LastName',
-// 		value: {
-// 			company: ['Dep - {Department}'],
-// 			personal: ['Name - {LastName}']
-// 		}
-// 	}
+//  {
+//      label: 'Company',
+//      value: ['{Company}']
+//  },
+//  {
+//      label: 'Department / LastName',
+//      value: {
+//          company: ['Dep - {Department}'],
+//          personal: ['Name - {LastName}']
+//      }
+//  }
 // ];
 // To specify 3 columns (named "Categories", "URL" and "IM"), where the first
 // will display categories, second will display the third work URL, and third
 // will display ICQ IM use:
 // var globalCollectionDisplay=[
-// 	{
-// 		label: 'Categories',
-// 		value: ['{Categories}']
-// 	},
-// 	{
-// 		label: 'URL',
-// 		value: ['{URL[type=WORK][:2]}']
-// 	},
-// 	{
-// 		label: 'IM',
-// 		value: ['{IM[service-type=ICQ]}']
-// 	}
+//  {
+//      label: 'Categories',
+//      value: ['{Categories}']
+//  },
+//  {
+//      label: 'URL',
+//      value: ['{URL[type=WORK][:2]}']
+//  },
+//  {
+//      label: 'IM',
+//      value: ['{IM[service-type=ICQ]}']
+//  }
 // ];
 //
 // Recommended settings if globalGroupContactsByCompanies
 // is set to false:
 // var globalCollectionDisplay=[
-// 	{
-// 		label: '{Name}',
-// 		value: ['{LastName}', ' {MiddleName}', ' {FirstName}']
-// 	},
-// 	{
-// 		label: '{Company} [{Department}]',
-// 		value: ['{Company}', ' [{Department}]']
-// 	},
-// 	{
-// 		label: '{JobTitle}',
-// 		value: ['{JobTitle}']
-// 	},
-// 	{
-// 		label: '{Email}',
-// 		value: ['{Email[:0]}']
-// 	},
-// 	{
-// 		label: '{Phone} 1',
-// 		value: ['{Phone[:0]}']
-// 	},
-// 	{
-// 		label: '{Phone} 2',
-// 		value: ['{Phone[:1]}']
-// 	},
-// 	{
-// 		label: '{NoteText}',
-// 		value: ['{NoteText}']
-// 	}
+//  {
+//      label: '{Name}',
+//      value: ['{LastName}', ' {MiddleName}', ' {FirstName}']
+//  },
+//  {
+//      label: '{Company} [{Department}]',
+//      value: ['{Company}', ' [{Department}]']
+//  },
+//  {
+//      label: '{JobTitle}',
+//      value: ['{JobTitle}']
+//  },
+//  {
+//      label: '{Email}',
+//      value: ['{Email[:0]}']
+//  },
+//  {
+//      label: '{Phone} 1',
+//      value: ['{Phone[:0]}']
+//  },
+//  {
+//      label: '{Phone} 2',
+//      value: ['{Phone[:1]}']
+//  },
+//  {
+//      label: '{NoteText}',
+//      value: ['{NoteText}']
+//  }
 // ];
 //
 // Recommended settings if globalGroupContactsByCompanies
 // is set to true:
 // var globalCollectionDisplay=[
-// 	{
-// 		label: '{Name}',
-// 		value: {
-// 			personal: ['{LastName}', ' {MiddleName}', ' {FirstName}'],
-// 			company: ['{Company}', ' [{Department}]']
-// 		}
-// 	},
-// 	{
-// 		label: '{JobTitle}',
-// 		value: ['{JobTitle}']
-// 	},
-// 	{
-// 		label: '{Email}',
-// 		value: ['{Email[:0]}']
-// 	},
-// 	{
-// 		label: '{Phone} 1',
-// 		value: ['{Phone[:0]}']
-// 	},
-// 	{
-// 		label: '{Phone} 2',
-// 		value: ['{Phone[:1]}']
-// 	},
-// 	{
-// 		label: '{NoteText}',
-// 		value: ['{NoteText}']
-// 	}
+//  {
+//      label: '{Name}',
+//      value: {
+//          personal: ['{LastName}', ' {MiddleName}', ' {FirstName}'],
+//          company: ['{Company}', ' [{Department}]']
+//      }
+//  },
+//  {
+//      label: '{JobTitle}',
+//      value: ['{JobTitle}']
+//  },
+//  {
+//      label: '{Email}',
+//      value: ['{Email[:0]}']
+//  },
+//  {
+//      label: '{Phone} 1',
+//      value: ['{Phone[:0]}']
+//  },
+//  {
+//      label: '{Phone} 2',
+//      value: ['{Phone[:1]}']
+//  },
+//  {
+//      label: '{NoteText}',
+//      value: ['{NoteText}']
+//  }
 // ];
 //
 // NOTE: if left undefined, the recommended settings will be used.
@@ -1451,13 +1451,13 @@ var globalGroupContactsByCompanies=false;
 // If undefined, the definition from globalCollectionDisplay is used.
 // Example:
 // var globalCollectionSort = [
-// 	['{LastName}'],
-// 	['{FirstName}'],
-// 	['{MiddleName}'],
-// 	{
-// 		company: ['{Categories}'],
-// 		personal: ['{Company}']
-// 	}
+//  ['{LastName}'],
+//  ['{FirstName}'],
+//  ['{MiddleName}'],
+//  {
+//      company: ['{Categories}'],
+//      personal: ['{Company}']
+//  }
 // ];
 
 
@@ -1469,5 +1469,3 @@ var globalGroupContactsByCompanies=false;
 // 5% will be truncated (" ...").
 // Example:
 var globalContactDataMinVisiblePercentage=1;
-
-
